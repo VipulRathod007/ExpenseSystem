@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="data">
+        <h1>{{ webTitle }}</h1>
+        <p>We're Here To Help You With Your Daily Expenses! <br>Our Web Application provides you the way to easily
+            manage
+            and store your expense data. We mainly provide <span>Two</span> types of services here.</p>
+        <h2><span>Services</span></h2>
+        <div class="card">
+            <div class="cardTitle">Free Service</div>
+            <hr>
+            <div class="card-detail">
+                <ul>
+                    <li>No need to login</li>
+                    <li>Your data will not be saved for future</li>
+                </ul>
+                <a href="/freeService">Launch!</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardTitle">Premium Service</div>
+            <hr>
+            <div class="card-detail">
+                <ul>
+                    <li>Advanced Access</li>
+                    <li>Your data will be saved for future</li>
+                </ul>
+                <a href="/login">Launch!</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

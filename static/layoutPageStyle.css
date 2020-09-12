@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+navbar
+{
+    background: rgba(0, 0, 0, .85);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.75% 12.5%;
+}
+.logo
+{
+    letter-spacing: 3.5pt;
+    color: lightcoral;
+}
+.logo:hover
+{
+    color: white;
+}
+.nav ul
+{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.nav ul li{
+    list-style: none;
+    margin: 0 5%;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1pt;
+}
+.nav ul li a{
+    color: white;
+}
+.nav ul li:hover
+{
+    border-bottom: 2pt solid lightcoral;
+}
+
+/* footer */
+
+footer
+{
+    background: rgba(0, 0, 0, .85);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75% 7.5%;
+    color: white;
+}
+footer .author
+{
+    flex-basis: 25%;
+    font-variant: small-caps;
+    line-height: 135%;
+}
+footer .author span
+{
+    color: lightcoral;
+}
+footer .social
+{
+    flex-basis: 75%;
+}
+.social ul
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.social ul li
+{
+    list-style: none;
+    text-transform: uppercase;
+    margin: 0 5%;
+}
+.social ul li a{
+    color: white;
+    letter-spacing: 2.5pt;
+    font-weight: bold;
+}
+.social ul li a:hover
+{
+    border-bottom: 2pt solid white;
+    color: lightcoral;
+}
+
+/* Free Service */
+.main
+{
+    margin: 5% 10%;
+    color: white;
+}
+.head h1{
+    border-bottom: 2pt solid lightcoral;
+    color: black;
+}
+.head h1:hover{
+    color: lightcoral;
+    border-bottom: 2pt solid black;
+}
+.main-body
+{
+    padding: 2.5% 0;
+}
+#myTable
+{
+    margin-bottom: 2.5%;
+}
+#myTable thead tr th:hover{
+    color: lightcoral;
+}
+.itemData label
+{
+    color: white;
+    background-color: black;
+}
+.formData{
+    color: white;
+    font-weight: bold;
+    padding: 2pt 5pt;
+}
+.inpStyle
+{
+    margin-bottom: 1%;
+}
+.inpStyle label:hover{
+    color: lightcoral;
+}
+.hid
+{
+    display: none;
+}
+
+/* login form */
+ a{
+    color: white;
+    text-decoration: none;
+}
+.form-style
+{
+    background-color: black;
+    color: white;
+    margin: 5% 0;
+}
+.lblHover{
+    color: white!important;
+}
+.lblHover:hover
+{
+    color: lightcoral;
+    border-bottom: 2pt solid white;
+}
+.form-style a
+{
+    color: white;
+    border: 2pt solid lightcoral;
+    padding: 2pt 5pt;
+    text-decoration: none;
+}
+.form-style a:hover
+{
+    color: lightcoral;
+    text-decoration: none;
+    border-color: white;
+}
+.heading
+{
+    color: black;
+    border-bottom: 2pt solid lightcoral;
+}
+.heading:hover
+{
+    color: lightcoral;
+    border-bottom: 2pt solid black;
+}
+.myBtn
+{
+    font-weight: bold;
+    background-color: black;
+    border: 2pt solid lightcoral;
+    color: white;
+    padding: 2pt 5pt!important;
+}
+.myBtn:hover{
+    background-color: lightcoral;
+    border: 2pt solid lightcoral;
+    color: white;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ webTitle }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='layoutPageStyle.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homepageStyle.css') }}">
+    <!-- CSS only -->
+    <style>
+        * {
+            line-height: 150%;
+            padding: 10pt 5pt;
+        }
+        a, a:hover{
+            text-decoration: none;
+        }
+        .btn-demo
+        {
+            color: white;
+            font-weight: bold;
+        }
+        .btn-demo:hover{
+            color: lightcoral
+        }
+    </style>
+</head>
+
+<body>
+    <navbar>
+        <div class="logo">
+            <h1>DES</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="#ftr">About</a></li>
+                <li><a href="/menu">User</a></li>
+                <li><a href="/logout">Exit</a></li>
+            </ul>
+        </div>
+    </navbar>
+
+    {% block body %}
+    {% endblock %}
+
+    <footer id="ftr">
+        <div class="author">
+            <p>This Web Application is designed &amp; developed by<br><span>{{authorName}}</span>.<br> in association with<br><span>The Avengers Team</span></p>
+        </div>
+        <div class="social">
+            <ul>
+                <!-- <li><a href="#"><img src="{{ url_for('static', filename='fb.svg') }}" alt=""></a></li> -->
+                <li><a href="mailto:{{ mailAddr }}">Mail Us</a></li>
+                <li><a href="{{ gitProf }}">Github</a></li>
+                <li><a href="{{ linkinProf }}">Linked In</a></li>
+                <li><a href="{{ instaProf }}">Instagram</a></li>
+                <li><a href="{{ fbProf }}">Facebook</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

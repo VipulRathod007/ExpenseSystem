@@ -1,0 +1,22 @@
+{
+  "metadata":
+  {
+    "local_uri" : "localhost",
+    "prod_uri" : "",
+    "username" : "root",
+    "db_uri" : "mysql+mysqlconnector://root:@localhost/expensesystem"
+  },
+  "siteData" :
+  {
+    "authorName" : "Vipul D Rathod",
+    "webTitle" : "Daily Expense System"
+  },
+  "authorDetails" :
+  {
+    "gitProf" : "https://github.com/VipulRathod007",
+    "fbProf" : "",
+    "instaProf" : "",
+    "linkinProf" : "",
+    "mailAddr" : "vipuldrathod1458@gmail.com"
+  }
+}

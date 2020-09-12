@@ -1,0 +1,55 @@
+.data
+{
+    padding: 0 5%;
+}
+.data h1
+{
+    color: lightcoral;
+}
+.data p
+{
+    font-variant: small-caps;
+    line-height: 135%;
+    font-size: large;
+}
+.data p span
+{
+    color: lightcoral;
+}
+.data h2 span
+{
+    text-transform: uppercase;
+    border-bottom: 2pt solid lightcoral;
+    letter-spacing: 2pt;
+}
+.card
+{
+    border: 2pt solid lightgray;
+    padding: 2.5% 5%;
+    margin: 2.5%;
+}
+.cardTitle
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1pt;
+}
+.card-detail ul li
+{
+    line-height: 135%;
+}
+.card-detail ul li:hover
+{
+    color: lightcoral;
+}
+.card-detail a
+{
+    color: black;
+    text-decoration: none;
+    background-color: lightcoral;
+    padding: 2pt 5pt;
+}
+.card-detail a:hover
+{
+    color: white;
+}

@@ -1,0 +1,48 @@
+{% extends "loggedInLayout.html" %}
+{% block body %}
+    <div class="main">
+        <div class="head">
+            <h1 class="heading">User Data</h1>
+        </div>
+        <div class="main-body">
+            <table class="table table-hover table-dark" id="myTable">
+                <thead>
+                    <tr>
+                        <th>Entry No.</th>
+                        <th>Item Name</th>
+                        <th>Item Units</th>
+                        <th>Price</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for data in userData %}
+                    <tr>
+                        <td>{{data.entryno}}</td>
+                        <td>{{data.itemname}}</td>
+                        <td class="unitCls">{{data.itemunits}}</td>
+                        <td class="priceCls">{{data.itemprice}}</td>
+                        <td>{{data.date}}</td>
+                    </tr>
+                    {% endfor%}
+                    <tr>
+                        <th>Total</th>
+                        <th></th>
+                        <th></th>
+                        <th id="showHere"></th>
+                        <th></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        var unitObj = document.getElementsByClassName('unitCls')
+        var priceObj = document.getElementsByClassName('priceCls')
+        var total = 0
+        for (let i = 0; i < unitObj.length; i++) {
+            total += (parseFloat(priceObj[i]) * parseFloat(unitObj[i]));
+        }
+        document.getElementById('showHere').innerHTML = total;
+    </script>
+{% endblock %}
