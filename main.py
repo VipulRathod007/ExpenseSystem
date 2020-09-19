@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, session
 from flask_sqlalchemy import SQLAlchemy
 import json
 from datetime import datetime
-from mysql import connector
 
 websiteTitle, author, mailid, fbURL, gitURL, instaURL, linkinURL, user_Mail = None, None, None, None, None, None, None, None
 with open('details.json', 'r') as fileHandle:
@@ -92,7 +91,6 @@ def premiumService():
             itemName = request.form.get('iname')
             itemUnit = request.form.get('iunits')
             itemPrice = request.form.get('iprice')
-            print(itemName)
             entry = Userdata(mailid=user_Mail, itemname=itemName, itemunits=itemUnit, itemprice=itemPrice,
                              date=datetime.now())
             db.session.add(entry)
