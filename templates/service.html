@@ -26,17 +26,17 @@
                 <div class="form-row">
                     <div class="inpStyle col-md-12">
                         <label for="validationCustom01" class="bg-dark formData">Item Name</label>
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="Enter Item Name Here" name="iname">
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="Enter Item Name Here" name="iname" required>
                     </div>
                     <div class="inpStyle col-md-12">
                         <label for="validationCustom02" class="bg-dark formData">Item Price</label>
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="Enter Item Price Here" name="iprice">
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="Enter Item Price Here" name="iprice" required>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="inpStyle col-md-12">
                         <label for="units" class="bg-dark formData">Item Units</label>
-                        <input type="number" name="iunits" id="units" placeholder="Enter Item Units Here" class="form-control">
+                        <input type="number" name="iunits" id="units" placeholder="Enter Item Units Here" class="form-control" required>
                     </div>
                 </div>
                 <button class="btn btn-dark btn-demo" type="button" onclick="addRow()">Add</button>
@@ -50,30 +50,39 @@
                 var count = 0
                 var totalCost = 0
                 function showResult() {
-                    document.getElementById('lblResult').innerHTML = totalCost;
-                    document.getElementById('lblResult').removeAttribute('hidden');
-                }
-
-                function change() {
-                    document.getElementById('log').setAttribute('hidden', 'true');
+                    if ( isNaN( totalCost ) || totalCost == 0 ) {
+                        alert("No Valid Data Found!");
+                    }
+                    else {
+                        document.getElementById('lblResult').innerHTML = totalCost;
+                        document.getElementById('lblResult').removeAttribute('hidden');
+                    }
                 }
 
                 function addRow() {
                     var itemName = document.itemData.iname.value;
                     var itemPrice = document.itemData.iprice.value;
+                    if (isNaN(itemPrice))
+                    {
+                        alert("Enter Valid Item Price!");
+                        return;
+                    }
                     var itemUnits = document.itemData.iunits.value;
-
-                    var table = document.getElementById("myTable");
-                    var row = table.insertRow(++count);
-                    var cell1 = row.insertCell(0);
-                    var cell2 = row.insertCell(1);
-                    var cell3 = row.insertCell(2);
-                    var cell4 = row.insertCell(3);
-                    if (itemName != null && itemPrice != null) {
+                    if (itemName != "" && itemPrice != "" && itemUnits!= "") {
+                        var table = document.getElementById("myTable");
+                        var row = table.insertRow(++count);
+                        var cell1 = row.insertCell(0);
+                        var cell2 = row.insertCell(1);
+                        var cell3 = row.insertCell(2);
+                        var cell4 = row.insertCell(3);
                         cell1.innerHTML = count
                         cell2.innerHTML = itemName
                         cell3.innerHTML = itemUnits
                         cell4.innerHTML = itemPrice
+                    }
+                    else
+                    {
+                        alert("Enter Valid Values!");
                     }
                     totalCost += (parseFloat(itemPrice) * parseFloat(itemUnits))
                     document.itemData.iname.value = "";
