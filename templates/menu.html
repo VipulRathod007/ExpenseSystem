@@ -17,32 +17,19 @@
                 </thead>
                 <tbody>
                     {% for data in userData %}
-                    <tr>
-                        <td>{{data.entryno}}</td>
+                    <tr class="bg-dark">
+                        <td class="bg-dark">{{data.entryno}}</td>
                         <td>{{data.itemname}}</td>
                         <td class="unitCls">{{data.itemunits}}</td>
                         <td class="priceCls">{{data.itemprice}}</td>
                         <td>{{data.date}}</td>
                     </tr>
                     {% endfor%}
-                    <tr>
-                        <th>Total</th>
-                        <th></th>
-                        <th></th>
-                        <th id="showHere"></th>
-                        <th></th>
-                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
     <script>
-        var unitObj = document.getElementsByClassName('unitCls')
-        var priceObj = document.getElementsByClassName('priceCls')
-        var total = 0
-        for (let i = 0; i < unitObj.length; i++) {
-            total += (parseFloat(priceObj[i]) * parseFloat(unitObj[i]));
-        }
-        document.getElementById('showHere').innerHTML = total;
+        $('#myTable').DataTable();
     </script>
 {% endblock %}
